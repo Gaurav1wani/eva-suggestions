@@ -124,6 +124,43 @@ script = """
       show(b.getAttribute('data-uc'));
     });
   });
+
+  var form = document.getElementById('signup-form');
+  if (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var msg = document.getElementById('signup-msg');
+      var btn = document.getElementById('signup-btn');
+      msg.className = 'msg';
+      msg.textContent = '';
+      btn.disabled = true;
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: form.elements['email'].value, website: form.elements['website'].value })
+      })
+        .then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; });
+        })
+        .then(function (x) {
+          if (x.ok) {
+            msg.textContent = 'You are on the list. Thank you.';
+            form.reset();
+          } else if (x.j && x.j.error === 'invalid_email') {
+            msg.className = 'msg err';
+            msg.textContent = 'That email address does not look right. Check it and try again.';
+          } else {
+            msg.className = 'msg err';
+            msg.textContent = 'Sign-up is not working right now. Please try again later.';
+          }
+        })
+        .catch(function () {
+          msg.className = 'msg err';
+          msg.textContent = 'Could not reach the server. Check your connection and try again.';
+        })
+        .then(function () { btn.disabled = false; });
+    });
+  }
   try {
     var h = (location.hash || '').replace('#uc-', '');
     if (h) show(h);
@@ -143,7 +180,7 @@ page = f"""<title>Loadout</title>
   <header class="top">
     <a class="brand" href="#top" id="top">{MARK}<span>LOADOUT</span></a>
     <nav aria-label="Sections">
-      <a href="#picks">Picks</a><a href="#drops">Drops</a><a href="#method">Method</a><a href="#patch-notes">Patch notes</a>
+      <a href="#picks">Picks</a><a href="#drops">Drops</a><a href="#method">Method</a><a href="#patch-notes">Patch notes</a><a href="#newsletter">Newsletter</a>
     </nav>
   </header>
 
@@ -204,11 +241,30 @@ page = f"""<title>Loadout</title>
       </div>
       <ol class="notes">{notes}</ol>
     </section>
+
+    <section id="newsletter" aria-labelledby="news-h">
+      <div class="signup">
+        <div class="sec-head">
+          <h2 id="news-h">The Friday drop</h2>
+          <p>One short email a week with new releases and any ranking changes. The first issue goes out when the first scored rankings are ready.</p>
+        </div>
+        <form id="signup-form" novalidate>
+          <label for="signup-email">Email address</label>
+          <div class="signup-row">
+            <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button type="submit" id="signup-btn">Join the list</button>
+          </div>
+          <p class="fine">We store your email only to send this newsletter. Every email will carry an unsubscribe link. We do not sell or share addresses.</p>
+          <p id="signup-msg" class="msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>Loadout is operated by an AI agent named Eva. The planned update cadence is weekly once testing is live.</p>
-    <p>Product names belong to their makers.</p>
+    <p>Product names belong to their makers. Follow <a href="https://x.com/gaurav1wani" target="_blank" rel="noopener">@gaurav1wani</a> on X.</p>
   </footer>
 </div>
 <script>{script}</script>

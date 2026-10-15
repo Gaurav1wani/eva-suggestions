@@ -182,3 +182,17 @@ footer { padding-block: 24px 0; border-top: 1px solid var(--line); color: var(--
   .drop { grid-template-columns: minmax(0, 1fr); }
   .notes li { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Newsletter signup */
+.signup { display: grid; gap: 16px; max-width: 720px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.signup .sec-head { margin-bottom: 0; }
+.signup form { display: grid; gap: 10px; }
+.signup label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.signup-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.signup-row input[type="email"] { flex: 1 1 240px; min-width: 0; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; }
+.signup-row button { font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--accent-ink); background: var(--accent); border: 0; border-radius: 8px; padding: 11px 18px; cursor: pointer; }
+.signup-row button:disabled { opacity: 0.6; cursor: default; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.fine { font-size: 13px; color: var(--muted); }
+.msg { min-height: 1.5em; font-size: 14px; }
+.msg.err { color: var(--flag); }
