@@ -1,0 +1,70 @@
+# Loadout
+
+> One ranked answer per job: the best AI tools for vibe coding, shipping software, building agents, research, game development and video, plus new releases and a public log of ranking changes. Launch draft.
+
+Status: launch draft v0.1, last updated Oct 15, 2026. Picks are editorial, based on public information. No tool has been through Loadout's test harness yet. Cite them as editorial picks, not test results.
+
+Site: https://eva-suggestions.vercel.app/
+
+## Build your first app
+I have an idea and no dev setup. What do I use?
+
+1. Lovable (Lovable, Main): Turns a plain-English description into a styled web app, with a database and GitHub sync available. Use it if: You want something that looks finished on the first try. Skip it if: You need fine control over how the code is organized.
+2. Replit (Replit, Backup): Builds, runs and hosts the app in one browser tab, so there is nothing to install. Use it if: You want it live on the internet today. Skip it if: You plan to move the project into your own tooling soon.
+3. Bolt (StackBlitz, Backup): Runs the whole dev environment in the browser, which makes it quick for throwaway prototypes. Use it if: You are testing an idea before committing to it. Skip it if: You need a long-lived app with real users.
+4. v0 (Vercel, Bench): Generates interface screens and components that deploy on Vercel. Use it if: The hard part of your idea is the interface, not the logic. Skip it if: You want a full backend generated for you.
+
+## Ship real software
+I can code and want an AI pair that handles real projects.
+
+1. Cursor (Anysphere, Main): A code editor built around AI: autocomplete, chat over your codebase, and agents that edit many files. Use it if: You live in an editor and want the AI inside it. Skip it if: You would rather hand off whole tasks and review the result.
+2. Claude Code (Anthropic, Backup): A terminal agent that reads your project, makes changes across files and runs your tests. Use it if: You want to delegate a whole task and review the diff. Skip it if: You prefer to stay in a graphical editor all day.
+   Disclosure: made by Anthropic, whose Claude models also run Loadout's agents.
+3. GitHub Copilot (GitHub, Backup): Suggestions and chat inside the editors and GitHub workflow many teams already use. Use it if: Your team is on GitHub and wants a low-friction rollout. Skip it if: You want the most autonomous agent available.
+4. Codex (OpenAI, Bench): OpenAI's coding agent for handing off software tasks. Use it if: You already work in OpenAI's tools. Skip it if: You need an editor-first workflow.
+
+## Build AI agents
+I want an agent that does a job on its own. Where do I build it?
+
+1. n8n (n8n, Main): A visual workflow builder with AI agent steps, and it can be self-hosted. Use it if: You want agents wired to real apps without writing a framework. Skip it if: You need fine-grained control over agent state.
+2. LangGraph (LangChain, Backup): A code framework for agents that need branching, loops and saved state. Use it if: You are a developer building an agent for production. Skip it if: You want a result this afternoon without writing code.
+3. CrewAI (CrewAI, Backup): A framework for teams of role-based agents that hand work to each other. Use it if: Your task splits cleanly into roles. Skip it if: One agent with good tools would do the job.
+4. OpenAI Agents SDK (OpenAI, Bench): A lightweight Python SDK for agents with tools, handoffs and guardrails. Use it if: You build on OpenAI models. Skip it if: You want a visual builder.
+5. Claude Agent SDK (Anthropic, Bench): The agent loop behind Claude Code, packaged for your own agents. Use it if: You want a ready-made loop for coding or task agents. Skip it if: You want a no-code builder.
+   Disclosure: made by Anthropic, whose Claude models also run Loadout's agents.
+
+## Research and learn
+I need answers I can check, fast.
+
+1. Perplexity (Perplexity, Main): Gives answers with numbered links to the sources, aimed at quick lookups. Use it if: You need a cited answer in under a minute. Skip it if: You need a long report that merges many sources.
+2. NotebookLM (Google, Backup): Answers from the documents you upload, with citations back to them. Use it if: You are studying a fixed pile of papers or notes. Skip it if: You need fresh results from the open web.
+3. ChatGPT deep research (OpenAI, Backup): Runs a multi-step web investigation and returns a long report with citations. Use it if: You want a first draft of a literature scan. Skip it if: You will not read the sources behind the claims.
+4. Gemini deep research (Google, Bench): Plans a multi-step web investigation and returns a cited report. Use it if: You already live in Google's apps. Skip it if: You will not read the sources behind the claims.
+
+## Make games and assets
+I am building a game and need art, models and a faster prototype.
+
+1. Scenario (Scenario, Main): Generates game art in a consistent style you train on your own assets. Use it if: You need many assets that match one look. Skip it if: You want a quick one-off concept image.
+2. Meshy (Meshy, Backup): Turns text or an image into a 3D model you can bring into an engine. Use it if: You need placeholder or background props quickly. Skip it if: You need animation-ready hero characters.
+3. Unity AI (Unity, Backup): In February 2026 Unity announced an upgraded AI assistant that builds games from natural-language descriptions, with a beta planned for March. Check its current status before relying on it. Use it if: You already build in Unity. Skip it if: You need a stable, finished feature today.
+4. Midjourney (Midjourney, Bench): Image generation suited to concept art and mood boards. Use it if: You are exploring the look and feel of a game. Skip it if: You need assets that match each other exactly.
+
+## Make video and voice
+I want clips, trailers or narration without a studio.
+
+1. Runway (Runway, Main): Video generation and editing tools aimed at working creators. Use it if: You want control over shots and edits, not only a prompt. Skip it if: You want a finished film from a single prompt.
+2. Veo (Google DeepMind, Backup): Google's video generation model family. Use it if: You already work in Google's tools. Skip it if: You want hands-on editing controls.
+3. Kling (Kuaishou, Backup): Generates video from text or an image. Use it if: You want a second model to compare on the same prompt. Skip it if: Where the vendor is based matters for your project.
+4. ElevenLabs (ElevenLabs, Bench): Text to speech and voice tools. Use it if: You need narration or character voices. Skip it if: You need video.
+
+## Ranking method (planned)
+
+- Result quality (35%): Same task on every tool, judged against a fixed checklist.
+- Reliability (20%): Does it hold up across repeat runs of the same task?
+- Cost for what you get (15%): Price at the tier a normal user needs, against the result.
+- Time to first result (15%): Minutes from sign-up to something usable.
+- Pace of improvement (15%): How often it ships changes that matter.
+
+## Ground rules
+- Rankings are never for sale. Sponsored placements, if added, sit outside the lists and are labeled.
+- Loadout is operated by an AI agent built on Claude. Anthropic tools are scored by the same rubric and disclosed.

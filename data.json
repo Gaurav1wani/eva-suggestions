@@ -1,0 +1,96 @@
+{
+  "version": "v0.1",
+  "updated": "Oct 15, 2026",
+  "use_cases": [
+    {
+      "id": "first-app",
+      "label": "Build your first app",
+      "question": "I have an idea and no dev setup. What do I use?",
+      "tools": [
+        {"name": "Lovable", "maker": "Lovable", "line": "Turns a plain-English description into a styled web app, with a database and GitHub sync available.", "use": "You want something that looks finished on the first try.", "skip": "You need fine control over how the code is organized.", "url": "https://lovable.dev"},
+        {"name": "Replit", "maker": "Replit", "line": "Builds, runs and hosts the app in one browser tab, so there is nothing to install.", "use": "You want it live on the internet today.", "skip": "You plan to move the project into your own tooling soon.", "url": "https://replit.com"},
+        {"name": "Bolt", "maker": "StackBlitz", "line": "Runs the whole dev environment in the browser, which makes it quick for throwaway prototypes.", "use": "You are testing an idea before committing to it.", "skip": "You need a long-lived app with real users.", "url": "https://bolt.new"},
+        {"name": "v0", "maker": "Vercel", "line": "Generates interface screens and components that deploy on Vercel.", "use": "The hard part of your idea is the interface, not the logic.", "skip": "You want a full backend generated for you.", "url": "https://v0.app"}
+      ]
+    },
+    {
+      "id": "ship-software",
+      "label": "Ship real software",
+      "question": "I can code and want an AI pair that handles real projects.",
+      "tools": [
+        {"name": "Cursor", "maker": "Anysphere", "line": "A code editor built around AI: autocomplete, chat over your codebase, and agents that edit many files.", "use": "You live in an editor and want the AI inside it.", "skip": "You would rather hand off whole tasks and review the result.", "url": "https://cursor.com"},
+        {"name": "Claude Code", "maker": "Anthropic", "line": "A terminal agent that reads your project, makes changes across files and runs your tests.", "use": "You want to delegate a whole task and review the diff.", "skip": "You prefer to stay in a graphical editor all day.", "note": "Disclosure: made by Anthropic, whose Claude models also run Loadout's agents.", "url": "https://docs.claude.com/en/docs/claude-code/overview"},
+        {"name": "GitHub Copilot", "maker": "GitHub", "line": "Suggestions and chat inside the editors and GitHub workflow many teams already use.", "use": "Your team is on GitHub and wants a low-friction rollout.", "skip": "You want the most autonomous agent available.", "url": "https://github.com/features/copilot"},
+        {"name": "Codex", "maker": "OpenAI", "line": "OpenAI's coding agent for handing off software tasks.", "use": "You already work in OpenAI's tools.", "skip": "You need an editor-first workflow."}
+      ]
+    },
+    {
+      "id": "build-agents",
+      "label": "Build AI agents",
+      "question": "I want an agent that does a job on its own. Where do I build it?",
+      "tools": [
+        {"name": "n8n", "maker": "n8n", "line": "A visual workflow builder with AI agent steps, and it can be self-hosted.", "use": "You want agents wired to real apps without writing a framework.", "skip": "You need fine-grained control over agent state.", "url": "https://n8n.io"},
+        {"name": "LangGraph", "maker": "LangChain", "line": "A code framework for agents that need branching, loops and saved state.", "use": "You are a developer building an agent for production.", "skip": "You want a result this afternoon without writing code.", "url": "https://www.langchain.com/langgraph"},
+        {"name": "CrewAI", "maker": "CrewAI", "line": "A framework for teams of role-based agents that hand work to each other.", "use": "Your task splits cleanly into roles.", "skip": "One agent with good tools would do the job.", "url": "https://www.crewai.com"},
+        {"name": "OpenAI Agents SDK", "maker": "OpenAI", "line": "A lightweight Python SDK for agents with tools, handoffs and guardrails.", "use": "You build on OpenAI models.", "skip": "You want a visual builder.", "url": "https://openai.github.io/openai-agents-python/"},
+        {"name": "Claude Agent SDK", "maker": "Anthropic", "line": "The agent loop behind Claude Code, packaged for your own agents.", "use": "You want a ready-made loop for coding or task agents.", "skip": "You want a no-code builder.", "note": "Disclosure: made by Anthropic, whose Claude models also run Loadout's agents.", "url": "https://docs.claude.com/en/docs/agent-sdk/overview"}
+      ]
+    },
+    {
+      "id": "research",
+      "label": "Research and learn",
+      "question": "I need answers I can check, fast.",
+      "tools": [
+        {"name": "Perplexity", "maker": "Perplexity", "line": "Gives answers with numbered links to the sources, aimed at quick lookups.", "use": "You need a cited answer in under a minute.", "skip": "You need a long report that merges many sources.", "url": "https://www.perplexity.ai"},
+        {"name": "NotebookLM", "maker": "Google", "line": "Answers from the documents you upload, with citations back to them.", "use": "You are studying a fixed pile of papers or notes.", "skip": "You need fresh results from the open web.", "url": "https://notebooklm.google"},
+        {"name": "ChatGPT deep research", "maker": "OpenAI", "line": "Runs a multi-step web investigation and returns a long report with citations.", "use": "You want a first draft of a literature scan.", "skip": "You will not read the sources behind the claims."},
+        {"name": "Gemini deep research", "maker": "Google", "line": "Plans a multi-step web investigation and returns a cited report.", "use": "You already live in Google's apps.", "skip": "You will not read the sources behind the claims."}
+      ]
+    },
+    {
+      "id": "game-dev",
+      "label": "Make games and assets",
+      "thin": true,
+      "question": "I am building a game and need art, models and a faster prototype.",
+      "tools": [
+        {"name": "Scenario", "maker": "Scenario", "line": "Generates game art in a consistent style you train on your own assets.", "use": "You need many assets that match one look.", "skip": "You want a quick one-off concept image.", "url": "https://www.scenario.com"},
+        {"name": "Meshy", "maker": "Meshy", "line": "Turns text or an image into a 3D model you can bring into an engine.", "use": "You need placeholder or background props quickly.", "skip": "You need animation-ready hero characters.", "url": "https://www.meshy.ai"},
+        {"name": "Unity AI", "maker": "Unity", "line": "In February 2026 Unity announced an upgraded AI assistant that builds games from natural-language descriptions, with a beta planned for March. Check its current status before relying on it.", "use": "You already build in Unity.", "skip": "You need a stable, finished feature today."},
+        {"name": "Midjourney", "maker": "Midjourney", "line": "Image generation suited to concept art and mood boards.", "use": "You are exploring the look and feel of a game.", "skip": "You need assets that match each other exactly.", "url": "https://www.midjourney.com"}
+      ]
+    },
+    {
+      "id": "video-voice",
+      "label": "Make video and voice",
+      "question": "I want clips, trailers or narration without a studio.",
+      "tools": [
+        {"name": "Runway", "maker": "Runway", "line": "Video generation and editing tools aimed at working creators.", "use": "You want control over shots and edits, not only a prompt.", "skip": "You want a finished film from a single prompt.", "url": "https://runwayml.com"},
+        {"name": "Veo", "maker": "Google DeepMind", "line": "Google's video generation model family.", "use": "You already work in Google's tools.", "skip": "You want hands-on editing controls."},
+        {"name": "Kling", "maker": "Kuaishou", "line": "Generates video from text or an image.", "use": "You want a second model to compare on the same prompt.", "skip": "Where the vendor is based matters for your project.", "url": "https://klingai.com"},
+        {"name": "ElevenLabs", "maker": "ElevenLabs", "line": "Text to speech and voice tools.", "use": "You need narration or character voices.", "skip": "You need video.", "url": "https://elevenlabs.io"}
+      ]
+    }
+  ],
+  "drops": [
+    {"date": "Oct 14", "name": "Gemini 4 Argon", "maker": "Google", "line": "A model released for long-running agent workflows, available through the Gemini API, AI Studio and the Gemini platform.", "affects": "Build AI agents"},
+    {"date": "Oct 14", "name": "Gemini app task mode", "maker": "Google", "line": "Lets the Gemini assistant keep working while you are away, with connections to more than 40 apps.", "affects": "Research and learn"},
+    {"date": "Oct 12", "name": "Dots", "maker": "OpenAI", "line": "Always-on agents that pursue goals you set between conversations, starting with Pro and Business Premium customers.", "affects": "Build AI agents"},
+    {"date": "Oct 11", "name": "Hermes for Businesses", "maker": "Nous Research", "line": "An enterprise offering built on the open-source Hermes agent, deployable in Slack, Telegram, WhatsApp and other channels.", "affects": "Build AI agents"},
+    {"date": "Oct 7", "name": "Claude Haiku 5.5", "maker": "Anthropic", "line": "A fast, low-cost small model with a 1M-token context window, aimed at high-volume tasks. Anthropic also makes Claude Code, ranked on this site.", "affects": "Ship real software"},
+    {"date": "Oct 5", "name": "Kimi K2.6", "maker": "Moonshot AI", "line": "An open-source model whose agent swarms can coordinate up to 1,000 agents on complex tasks.", "affects": "Build AI agents"},
+    {"date": "Oct 5", "name": "Autopilot", "maker": "Microsoft", "line": "A long-running agent that can work for days in a cloud sandbox with externalized memory.", "affects": "Build AI agents"},
+    {"date": "Oct 2", "name": "Agent Droplets", "maker": "DigitalOcean", "line": "A bundled monthly plan (Pro $50, Team $200) covering agent runtimes, inference, memory and governed tool access.", "affects": "Build AI agents"},
+    {"date": "Oct 2", "name": "Strands Decider 2B", "maker": "Strands Labs (AWS)", "line": "An open-source 2-billion-parameter decision model designed to run locally with confidence-scored outputs.", "affects": "Build AI agents"}
+  ],
+  "criteria": [
+    {"name": "Result quality", "weight": 35, "how": "Same task on every tool, judged against a fixed checklist."},
+    {"name": "Reliability", "weight": 20, "how": "Does it hold up across repeat runs of the same task?"},
+    {"name": "Cost for what you get", "weight": 15, "how": "Price at the tier a normal user needs, against the result."},
+    {"name": "Time to first result", "weight": 15, "how": "Minutes from sign-up to something usable."},
+    {"name": "Pace of improvement", "weight": 15, "how": "How often it ships changes that matter."}
+  ],
+  "patch_notes": [
+    {"v": "v0.1", "date": "Oct 15, 2026", "text": "Launch draft. Six jobs, four or five tools each. Picks are editorial, based on public information. No tool has been through the test harness yet, and the game-making list is the thinnest."},
+    {"v": "Next", "date": "Planned", "text": "Build the test harness, run one fixed task per job on every listed tool, and replace editorial picks with scored ones. Each re-ranking will be logged here with the reason."}
+  ]
+}
